@@ -1,0 +1,12 @@
+[submodule "eisenbahn"]
+	path = eisenbahn
+	url = https://github.com/anerfo/eisenbahn.git
+[submodule "communication"]
+	path = communication
+	url = https://github.com/anerfo/eisenbahn.communication.git
+[submodule "infrastructure"]
+	path = infrastructure
+	url = https://github.com/anerfo/eisenbahn.infrastructure.git
+[submodule "controls"]
+	path = controls
+	url = https://github.com/anerfo/eisenbahn.controls.git
