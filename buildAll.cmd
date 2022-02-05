@@ -16,6 +16,6 @@ exit /b 0
 	echo "%~1" 
 	git checkout %BRANCH%
 	git pull
-	msbuild "%~1" -t:restore -p:RestorePackagesConfig=true
+	msbuild "%~1" -p:RestorePackagesConfig=true
 	popd
 	exit /b 0
