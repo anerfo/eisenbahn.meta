@@ -2,7 +2,7 @@
 
 set BRANCH=main
 
-call "%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Community\Common7\Tools\VsDevCmd.bat"
+call "%ProgramFiles%\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat"
 
 call :BUILD "%~dp0eisenbahn"
 call :BUILD "%~dp0communication"
@@ -16,6 +16,7 @@ exit /b 0
 	echo "%~1" 
 	git checkout %BRANCH%
 	git pull
-	msbuild "%~1" -p:RestorePackagesConfig=true
+	msbuild "%~1" -t:restore -p:RestorePackagesConfig=true
+	msbuild "%~1" -p:Configuration=Release -p:Platform=x64
 	popd
 	exit /b 0
